@@ -1,0 +1,4 @@
+remote_local() {
+  if [[ ! "$SSH_CONNECTION" ]];then
+    echo -ne "$(
+}
