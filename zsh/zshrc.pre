@@ -2,7 +2,3 @@ if [[ -f "${HOME}/.dircolors" && -x `which dircolors` ]]; then
     eval `dircolors ~/.dircolors`
     zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 fi
-
-if [[ -x `which sheldon` ]]; then
-    eval "$(sheldon source)"
-fi
