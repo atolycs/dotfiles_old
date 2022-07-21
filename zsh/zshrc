@@ -1,1 +1,7 @@
-PROMPT='%n@%m %c %# '
+zsh_confd="${ZDOTDIR}/zsh.d"
+
+for i in ${zsh_confd}/*; do
+   source $i
+done
+
+#PROMPT='%n@%m %c %# '

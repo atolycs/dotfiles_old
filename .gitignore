@@ -9,3 +9,4 @@
 !/.zprofile
 !/.zshrc
 !/.gitkeep
+!/zsh.d/*
