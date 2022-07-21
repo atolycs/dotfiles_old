@@ -1,0 +1,5 @@
+
+__run_test(){
+   echo "Your Running ${SHELL} !"
+}
+alias ttest="__run_test"

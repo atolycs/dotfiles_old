@@ -1,8 +1,7 @@
-autoload -Uz vcs_info
 setopt prompt_subst
-zstyle ':vcs_info:git:*' check-for-changes true
-zstyle ':vcs_info:git:*' stagedstr "%F{yellow}!"
-zstyle ':vcs_info:git:*' unstagedstr "%F{red}+"
-zstyle ':vcs_info:*' formats "%F{green}%c%u[%b]%f"
-zstyle ':vcs_info:*' actionformats '[%b|%a]'
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:*' stagedstr "%F{yellow}!"
+zstyle ':vcs_info:*' unstagedstr "%F{red}+"
+zstyle ':vcs_info:*' formats '%F{green}(%s)-[%b]%c%u%f'
+zstyle ':vcs_info:*' actionformats '(%s)-[%b|%a]'
 precmd(){ vcs_info }

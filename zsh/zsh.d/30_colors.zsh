@@ -1,1 +1,1 @@
-autoload -Uz colors && colors
+colors
