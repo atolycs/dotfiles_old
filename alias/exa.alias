@@ -1,13 +1,1 @@
 
-is_sh(){
-  
-}
-
-is_zsh(){
-}
-
-case ${SHELL} in
-    "*ash"|"sh")
-    "zsh")
-esac
-
