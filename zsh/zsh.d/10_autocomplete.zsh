@@ -1,9 +1,11 @@
 fpath=(${ZDOTDIR}/completion $fpath)
 compinit -i
-zstyle ':completion:*' menu select
+setopt menu_complete
+zstyle ':completion:*' menu select=2
+zstyle ':completion:*' insert-tab false
 zstyle ':completion:*' rehash true
 zstyle ':completion:*' verbose yes
-zstyle ':completion:*' completer _expand _complete _match _prefix _approximate _list _history
+zstyle ':completion:*' completer _expand _complete _match _prefix _approximate _history
 zstyle ':completion:*:messages' format "%F{yellow}%d%f"
 zstyle ':completion:*:warnings' format "%F{red}'No matches for:%F{yellow} %d%f"
 zstyle ':completion:*:descriptions' format "%F{yellow}completing %B%d%b%f"
