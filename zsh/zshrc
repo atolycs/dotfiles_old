@@ -6,6 +6,8 @@ for i in ${zsh_confd}/*; do
    source $i
 done
 
+[[ -r "${ZDOTDIR}/.zshrc.local" ]] && source "${ZDOTDIR}/.zshrc.local"
+
 source ${ZDOTDIR}/zshrc.post
 
 #PROMPT='%n@%m %c %# '

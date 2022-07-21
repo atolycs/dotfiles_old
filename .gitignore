@@ -1,5 +1,6 @@
 ### Zsh ###
 .zsh_history
+.zshrc.local
 
 # Zsh compiled script + zrecompile backup
 *.zwc
