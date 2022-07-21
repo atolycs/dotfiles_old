@@ -1,7 +1,11 @@
 zsh_confd="${ZDOTDIR}/zsh.d"
 
+source ${ZDOTDIR}/zshrc.pre
+
 for i in ${zsh_confd}/*; do
    source $i
 done
+
+source ${ZDOTDIR}/zshrc.post
 
 #PROMPT='%n@%m %c %# '
