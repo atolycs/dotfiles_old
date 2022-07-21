@@ -1,0 +1,4 @@
+path=(
+  ~/.local/bin(N-/)
+  $path[@]
+)
