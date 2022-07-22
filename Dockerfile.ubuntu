@@ -1,2 +1,14 @@
 FROM ubuntu:latest
-
+ARG UPWD
+ENV DEBIAN_FRONTEND=noninteractive \
+    TZ="Asia/Tokyo"
+RUN apt update && \
+    apt install -y curl build-essential tzdata zsh make git &&\
+    apt clean && \
+    useradd -s $(which zsh) -m "runner" && \
+    echo "runner:$UPWD" | chpasswd && \
+    NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" &&\
+    rm -rf /var/lib/apt/lists/*
+COPY . /home/runner/dotfiles
+USER runner
+WORKDIR /home/runner/dotfiles
