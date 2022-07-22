@@ -1,4 +1,8 @@
-fpath=(${ZDOTDIR}/completion $fpath)
+fpath=(
+   ${ZDOTDIR}/completion
+   #$(brew --prefix)/share/zsh/site-functions
+   $fpath
+)
 compinit -i
 setopt menu_complete
 zstyle ':completion:*' menu select=2
@@ -11,3 +15,4 @@ zstyle ':completion:*:warnings' format "%F{red}'No matches for:%F{yellow} %d%f"
 zstyle ':completion:*:descriptions' format "%F{yellow}completing %B%d%b%f"
 zstyle ':completion:*:corrections' format "%F{yellow}%B%d %F{red}(errors: %e)%b%f"
 zstyle ':completion:*:options' description 'yes'
+bindkey "^[[Z" reverse-menu-complete
