@@ -7,3 +7,5 @@ setopt hist_no_store
 setopt hist_expand
 setopt EXTENDED_HISTORY
 setopt share_history
+setopt append_history
+zstyle ":completion:*:commands" rehash 1

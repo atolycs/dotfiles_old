@@ -1,1 +1,5 @@
-
+if type exa >> /dev/null
+then
+   alias ls="exa --icons"
+   alias ll="ls -la"
+fi

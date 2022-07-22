@@ -15,4 +15,5 @@ zstyle ':completion:*:descriptions' format "%F{yellow}completing %B%d%b%f"
 zstyle ':completion:*:corrections' format "%F{yellow}%B%d %F{red}(errors: %e)%b%f"
 zstyle ':completion:*:options' description 'yes'
 zstyle ':completion:*:sudo:*' command-path $path
+zstyle ":completion:*:commands" rehash 1
 bindkey "^[[Z" reverse-menu-complete
