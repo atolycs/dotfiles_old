@@ -1,6 +1,5 @@
 fpath=(
    ${ZDOTDIR}/completion
-   #$(brew --prefix)/share/zsh/site-functions
    $fpath
 )
 compinit -i
