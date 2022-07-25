@@ -1,4 +1,4 @@
-typeset -U PATH path fpath
+typeset -U PATH path fpath CUSTOM_FUNCTION_PATH
 for aa in ${ZDOTDIR}/../alias/*;do
    source $aa
 done
