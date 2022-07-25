@@ -1,7 +1,13 @@
 if type lsd >> /dev/null
 then
-  alias ls="lsd"
-  alias ll="lsd -la"
+  alias ls="lsd --total-size"
+  alias ll="ls -la"
+  alias lt="ll --tree"
 else
   alias ls="ls --color=auto"
+fi
+
+if type bat >> /dev/null
+then
+  alias cat="bat"
 fi
