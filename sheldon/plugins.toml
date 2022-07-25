@@ -12,6 +12,9 @@
 
 shell = "zsh"
 
+[templates]
+fpath = 'fpath=("{{ dir }}" $fpath)'
+
 [plugins]
 
 [plugins.zsh-autosuggestions]

@@ -4,6 +4,15 @@ fpath=(
    ${BREW_COMPLETION}
    $fpath
 )
+
+if [ -v ASDF_DIR ];then
+   fpath=(
+	${ASDF_DIR}/completions
+	$fpath
+   ) 
+fi
+	
+
 compinit -i
 setopt menu_complete
 zstyle ':completion:*' menu select=2
