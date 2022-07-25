@@ -1,1 +1,7 @@
-alias ls="ls --color=auto"
+if type lsd >> /dev/null
+then
+  alias ls="lsd"
+  alias ll="lsd -la"
+else
+  alias ls="ls --color=auto"
+fi

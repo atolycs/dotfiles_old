@@ -35,3 +35,5 @@ zsdoc/data
 # sheldon
 sheldon/*
 !sheldon/plugins.toml
+.zcompcache
+Brewfile.*

@@ -1,4 +1,0 @@
-list=( ${(Q)"${(z)$(<<\EO:list
-'alias' 'aspell-dictionaries' 'bundle' 'determine-rebottle-runners' 'postgresql-upgrade-database' 'unalias'
-EO:list
-)}"} )

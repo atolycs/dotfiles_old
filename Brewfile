@@ -1,0 +1,6 @@
+tap "homebrew/aliases"
+tap "homebrew/bundle"
+tap "homebrew/core"
+brew "lsd"
+brew "procs"
+brew "sheldon"

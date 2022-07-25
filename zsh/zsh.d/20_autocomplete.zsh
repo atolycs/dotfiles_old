@@ -1,5 +1,7 @@
+BREW_COMPLETION="$(brew --prefix)/share/zsh/site-functions"
 fpath=(
    ${ZDOTDIR}/completion
+   ${BREW_COMPLETION}
    $fpath
 )
 compinit -i
@@ -16,4 +18,5 @@ zstyle ':completion:*:corrections' format "%F{yellow}%B%d %F{red}(errors: %e)%b%
 zstyle ':completion:*:options' description 'yes'
 zstyle ':completion:*:sudo:*' command-path $path
 zstyle ":completion:*:commands" rehash 1
+setopt completealiases
 bindkey "^[[Z" reverse-menu-complete
