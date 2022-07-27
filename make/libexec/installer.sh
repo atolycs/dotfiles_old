@@ -15,6 +15,7 @@ do_dotinstall() {
 
 do_brewinstall() {
   echo "Install Select HomeBrew"
+  bash ./homebrew.sh
 }
 
 main(){
