@@ -1,10 +1,17 @@
-if type lsd >> /dev/null
+#if type lsd >> /dev/null
+#then
+#  alias ls="lsd --total-size"
+#  alias ll="lsd --total-size -la"
+#  alias lt="lsd --total-size --tree"
+#else
+#  alias ls="ls --color=auto"
+#fi
+
+if type exa >> /dev/null
 then
-  alias ls="lsd --total-size"
-  alias ll="ls -la"
-  alias lt="ll --tree"
-else
-  alias ls="ls --color=auto"
+   alias ls="exa --icons --group"
+   alias ll="ls -la"
+   alias lt="ls -la --tree"
 fi
 
 if type bat >> /dev/null

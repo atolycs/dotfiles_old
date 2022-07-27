@@ -1,5 +1,0 @@
-if type exa >> /dev/null
-then
-   alias ls="exa --icons $@"
-   alias ll="exa --icons -la $@"
-fi
