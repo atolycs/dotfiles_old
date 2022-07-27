@@ -1,73 +1,28 @@
 #!/usr/bin/env bash
 
-has() {
+_hascmd() {
     type $1 >> /dev/null 2>&1
+}
+
+download_dotfiles() {
+   local DOTFILES_REPO="https://gitlab.com/Atolycs/dotfiles.git"
+   local DOT_PATH="${HOME}/dotfiles"
+
+   if _hascmd "git";then
+      git clone --recursive "${DOTFILES_REPO}" "${DOT_PATH}"
+   fi
+}
+
+do_make() {
+ :
 }
 
 do_help() {
     echo "usage: $(basename ${0}) [mode] [options]"
 }
 
-do_dotinstall() {
-  echo "INSTALLTO: ${TO_INSTALL}"
-  echo "selected_shell: ${selected_shell}"
-}
-
-do_brewinstall() {
-  echo "Install Select HomeBrew"
-  bash ./homebrew.sh
-}
-
 main(){
-    local TO_INSTALL="${HOME}/dotfiles"
-    local MODE=""
-    local INSTALL_BREW
-    local selected_shell
-
-    while (( $# > 0))
-    do
-    case $1 in
-        -d|--dotfiles=*)
-             if [[ "$1" =~ ^--dotfiles= ]];then
-                 TO_INSTALL=$(echo $1 | sed -e 's/^--dotfiles=//')
-             else
-                 TO_INSTALL="$2"
-                 shift;
-             fi
-            ;;
-        -h|--help)
-            do_help
-            exit 0;;
-        -b|--brew)
-            INSTALL_BREW=1;;
-
-	-s|--shell=*)
-	    if [[ "$1" =~ ^--shell= ]];then
-		 selected_shell=$(echo $1 | sed -e 's/^--shell=//')
-	    else
-		 selected_shell="$2"
-		 shift
-            fi
-		 ;;
-        -*)
-            echo "unkown_option: $1"
-            do_help
-            exit 0;;
-
-        *)
-            MODE="$1";;
-        esac
-        shift
-    done
-
-    case $MODE in
-        install) 
-		[[ -n ${INSTALL_BREW} ]] && do_brewinstall
-	        do_dotinstall;;
-        update)
-		echo "update mode";;
-        *) do_help;;
-    esac
+:
 }
 
 main $@
