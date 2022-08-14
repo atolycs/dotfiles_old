@@ -1,3 +1,7 @@
+### Vim
+*.swp
+
+
 ### Zsh ###
 .zsh_history
 .zshrc.local
