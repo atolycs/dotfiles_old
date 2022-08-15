@@ -6,6 +6,10 @@ DIRCOLORS_DIR = $(TOP_DIR)/dircolors
 
 -include $(MKMODULE_DIR)/*.mk
 
+
+
+all: dotfiles
+
 linkecho:
 	echo ln -s $1 $2
 
@@ -13,5 +17,8 @@ linkecho:
 link-sheldon:
 link-zsh:
 link-dircolors:
+dotfiles: link-dircolors 
+
+info:
 
 linkall: link-sheldon link-zsh link-dircolors
