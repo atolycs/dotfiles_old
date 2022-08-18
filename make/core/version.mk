@@ -1,0 +1,2 @@
+DOT_VERSION = "1.0"
+BUILDER_VERSION = "0.1 alpha"

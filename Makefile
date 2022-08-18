@@ -22,6 +22,7 @@ DIRCOLORS_DIR = $(TOP_DIR)/dircolors
 #link-zsh:
 #link-dircolors:
 #dotfiles: link-dircolors 
+.PHONY: print-info info link link-${DETECTED_ID}
 
 info: print-info
 
