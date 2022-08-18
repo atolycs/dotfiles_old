@@ -11,6 +11,8 @@ ZSH_DIR = $(TOP_DIR)/zsh
 MKMODULE_DIR = $(TOP_DIR)/make
 DIRCOLORS_DIR = $(TOP_DIR)/dircolors
 
+all: help
+
 -include ${MKMODULE_DIR}/*/*.mk
 
 .PHONY: greeting link
@@ -18,6 +20,7 @@ greeting: print-welcome-message print-logo print-version_right print-info
 
 link: greeting init-base init-${DETECTED_ID} init-${DETECTED_SHELL} print-end
 
+info: print-info
 
 update:
 	@$(call _info,Updating dotfiles...)
