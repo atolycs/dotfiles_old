@@ -22,13 +22,14 @@ DIRCOLORS_DIR = $(TOP_DIR)/dircolors
 #link-zsh:
 #link-dircolors:
 #dotfiles: link-dircolors 
-.PHONY: info link link-${DETECTED_ID} greeting _waiting dd_test
+#.PHONY: info link link-${DETECTED_ID} greeting _waiting dd_test
 
-_waiting:
-	@$(shell sleep 5s)
+#_waiting:
+#	@echo "Setup start after 5sec..."
+#	@$(shell sleep 5s)
 
-greeting: print-welcome-message print-logo print-version_right print-info
+#greeting: print-welcome-message print-logo print-version_right print-info
 
-check: check-base check-${DETECTED_ID} check-${DETECTED_SHELL}
+#list: list-base list-${DETECTED_SHELL}
 
-link: greeting check _waiting link-base link-${DETECTED_ID}
+#link: greeting list _waiting link-base link-${DETECTED_ID}
