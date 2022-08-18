@@ -1,2 +1,1 @@
-export ZDOTDIR=$(cd "$(dirname "$(realpath ${BASH_SOURCE:-${(%):-%N}})")" && pwd)
-source ${ZDOTDIR}/zshrc
+/home/faithless/dotfiles/zsh/env.zsh ---
