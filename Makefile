@@ -17,3 +17,8 @@ DIRCOLORS_DIR = $(TOP_DIR)/dircolors
 greeting: print-welcome-message print-logo print-version_right print-info
 
 link: greeting init-base init-${DETECTED_ID} print-end
+
+
+update:
+	@$(call _info,Updating dotfiles...)
+	@$(shell git pull)
