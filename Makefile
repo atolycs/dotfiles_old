@@ -29,6 +29,6 @@ _waiting:
 
 greeting: print-welcome-message print-logo print-version_right print-info
 
-check: check-base check-${DETECTED_SHELL}
+check: check-base check-${DETECTED_ID} check-${DETECTED_SHELL}
 
 link: greeting check _waiting link-base link-${DETECTED_ID}
