@@ -16,7 +16,7 @@ DIRCOLORS_DIR = $(TOP_DIR)/dircolors
 .PHONY: greeting link
 greeting: print-welcome-message print-logo print-version_right print-info
 
-link: greeting init-base init-${DETECTED_ID} print-end
+link: greeting init-base init-${DETECTED_ID} init-${DETECTED_SHELL} print-end
 
 
 update:
