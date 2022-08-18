@@ -1,2 +1,1 @@
-export ZDOTDIR=$(dirname $(realpath $0))
-source ${ZDOTDIR}/zshrc
+export ZDOTDIR=/home/faithless/dotfiles/zsh

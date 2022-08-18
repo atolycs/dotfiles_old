@@ -1,3 +1,3 @@
-if [[ "$(_os-detect)" != "arch" ]];then
+if [[ "$(_os-detect)" != "arch" -a type brew >> /dev/null  ]];then
    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
