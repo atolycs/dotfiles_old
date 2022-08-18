@@ -13,7 +13,7 @@ DIRCOLORS_DIR = $(TOP_DIR)/dircolors
 
 -include ${MKMODULE_DIR}/*/*.mk
 
-.PHONY: greeting
+.PHONY: greeting link
 greeting: print-welcome-message print-logo print-version_right print-info
 
-link: greeting init-base init-${DETECTED_OS}
+link: greeting init-base init-${DETECTED_ID}
