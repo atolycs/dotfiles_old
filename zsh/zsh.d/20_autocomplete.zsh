@@ -1,4 +1,3 @@
-BREW_COMPLETION="$(brew --prefix)/share/zsh/site-functions"
 fpath=(
    ${ZDOTDIR}/completion
    ${BREW_COMPLETION}
