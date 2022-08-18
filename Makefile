@@ -13,23 +13,7 @@ DIRCOLORS_DIR = $(TOP_DIR)/dircolors
 
 -include ${MKMODULE_DIR}/*/*.mk
 
-#all: dotfiles
+.PHONY: greeting
+greeting: print-welcome-message print-logo print-version_right print-info
 
-#linkecho:
-#	echo ln -s $1 $2
-
-#link-sheldon:
-#link-zsh:
-#link-dircolors:
-#dotfiles: link-dircolors 
-#.PHONY: info link link-${DETECTED_ID} greeting _waiting dd_test
-
-#_waiting:
-#	@echo "Setup start after 5sec..."
-#	@$(shell sleep 5s)
-
-#greeting: print-welcome-message print-logo print-version_right print-info
-
-#list: list-base list-${DETECTED_SHELL}
-
-#link: greeting list _waiting link-base link-${DETECTED_ID}
+link: greeting init-base init-${DETECTED_OS}

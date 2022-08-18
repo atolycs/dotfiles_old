@@ -4,6 +4,10 @@ define _blank
 	@$(MAKE) -s _blank
 endef
 
+define _info
+	@echo $(info $1)
+endef
+
 _blank:
 	@echo ""
 
