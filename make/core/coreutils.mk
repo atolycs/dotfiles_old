@@ -40,3 +40,7 @@ print-logo:
 	@echo "( (_| | |_| | |__| |  | | ( (/ /|___ |"
 	@echo " \____|\___/ \___)_|  |_|_|\____|___/"
 
+
+print-end: 
+	@echo "Thank you run this program"
+	@echo "Let's Happy Hacking!"
