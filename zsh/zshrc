@@ -2,11 +2,12 @@ zsh_confd="${ZDOTDIR}/zsh.d"
 
 source ${ZDOTDIR}/zshrc.pre
 
-for i in ${zsh_confd}/*; do
+for i in ${zsh_confd}/*.zsh; do
    source $i
 done
 
 [[ -r "${ZDOTDIR}/.zshrc.local" ]] && source "${ZDOTDIR}/.zshrc.local"
+[[ -r "${HOME}/.zshrc.local" ]] && source "${HOME}/.zshrc.local"
 
 source ${ZDOTDIR}/zshrc.post
 

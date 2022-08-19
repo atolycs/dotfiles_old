@@ -12,6 +12,9 @@ then
    alias ls="exa --icons --group"
    alias ll="ls -la"
    alias lt="ls -la --tree"
+else
+   alias ls="ls --color=auto"
+   alias ll="ls -la"
 fi
 
 if type bat >> /dev/null
