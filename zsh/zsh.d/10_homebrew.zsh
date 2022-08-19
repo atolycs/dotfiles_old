@@ -1,7 +1,6 @@
 BREW_COMPLETION=""
 . /etc/os-release
 
-if !\(type brew > /dev/null 2>&1\) -a \(${ID} != "arch"\) ;then
-   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-   BREW_COMPLETION="$(brew --prefix)/share/zsh/site-functions"
-fi
+test -d ~/.linuxbrew -a "${ID}" != "arch" && eval "$(~/.linuxbrew/bin/brew shellenv)"
+test -d /home/linuxbrew/.linuxbrew -a "${ID}" != "arch" && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+BREW_COMPLETION="$(brew --prefix)/share/zsh/site-functions"
