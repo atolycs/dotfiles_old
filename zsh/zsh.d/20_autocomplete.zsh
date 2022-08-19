@@ -12,7 +12,7 @@ if [ -v ASDF_DIR ];then
 fi
 	
 
-compinit -i
+compinit -i -d ~/.zcompdump
 setopt menu_complete
 zstyle ':completion:*' menu select=2
 zstyle ':completion:*' insert-tab false
