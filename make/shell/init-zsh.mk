@@ -8,6 +8,7 @@ init-zsh: $(ZSH_ENV) $(ZSH_DEST) require-reload
 $(ZSH_ENV): 
 	@echo "$(info "Generating $(ZSH_ENV) file...")"
 	@$(shell echo "export ZDOTDIR=$(ZSH_DIR)" > $(ZSH_ENV))
+	@$(shell echo "exec zsh" >> $(ZSH_ENV))
 
 $(ZSH_DEST): $(ZSH_ENV)
 	@echo "$(info "Linking $< to $@")"
