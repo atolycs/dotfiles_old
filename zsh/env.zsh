@@ -1,2 +1,1 @@
-export ZDOTDIR=/home/faithless/dotfiles/zsh
-exec zsh
+export ZDOTDIR=/home/atolycs/dotfiles/zsh
