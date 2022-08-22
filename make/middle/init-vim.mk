@@ -1,7 +1,10 @@
 .PHONY: init-vim
 
-VIM_PATH = $(TOP_DIR)/vim
+VIMRC_PATH = $(TOP_DIR)/vim/vimrc
+DEPLOY_VIMRC_PATH = $(HOME)/.vimrc
 
-init-vim:
-	@$(call _info,Linking $(VIM_PATH)/vimrc ---> $(HOME)/.vimrc ...)
-	@ln -s $(VIM_PATH)/vimrc $(HOME)/.vimrc
+init-vim: $(DEPLOY_VIMRC_PATH)
+
+$(DEPLOY_VIMRC_PATH): $(VIMRC_PATH)
+	@$(call _info,Linking $$< ---> $$@ ...)
+	@ln -s $< $@
