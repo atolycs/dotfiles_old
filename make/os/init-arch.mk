@@ -1,4 +1,4 @@
 .PHONY: init-arch
 
-init-arch: 
-	@echo "ArchLinux is skip"
+init-arch: init-kbd
+#	@echo "ArchLinux is skip"
