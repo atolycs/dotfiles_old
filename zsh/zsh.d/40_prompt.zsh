@@ -1,2 +1,2 @@
 promptinit
-PROMPT="%{$fg_bold[blue]%}%n%{$reset_color%}@%{$fg_bold[white]%}%m %{$fg_bold[yellow]%}%~ \${vcs_info_msg_0_}%{$reset_color%}%# "
+PROMPT="%{$fg[cyan]%}%n%{$reset_color%}@%{$fg[white]%}%m %{$fg_no_bold[yellow]%}%(3~|.../%2~|%~) \${vcs_info_msg_0_}%{$reset_color%}%# "
