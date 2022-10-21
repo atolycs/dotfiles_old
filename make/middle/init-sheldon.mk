@@ -1,7 +1,7 @@
 .PHONY: init-sheldon
 
 SHELDON_PATH = $(TOP_DIR)/sheldon
-DEPLOY_SHELDON_PATH = $(HOME)/.sheldon
+DEPLOY_SHELDON_PATH = $(HOME)/.config/.sheldon
 SHELDON_PLUGINLIST = $(SHELDON_PATH)/plugins.toml
 DEPLOY_SHELDON_PLUGINLIST = $(DEPLOY_SHELDON_PATH)/plugins.toml
 
