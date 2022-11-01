@@ -1,1 +1,30 @@
+format = "$all$direcotry$character"
 add_newline = false
+
+[username]
+style_user = "blue bold"
+style_root = "red bold"
+format = "[$user]($style)"
+disabled = false
+show_always = true
+
+[hostname]
+ssh_only = false
+format = "@[$hostname](bold white) "
+trim_at = ".companyname.com"
+disabled = false
+
+[cmd_duration]
+disabled = true
+
+[character]
+success_symbol = "[>](bold green)"
+error_symbol = "[>](bold red)"
+
+[directory]
+fish_style_pwd_dir_length = 1
+read_only = "X"
+format = "[in](bold yellow) [$path]($style)[$read_only]($read_only_style) "
+
+[line_break]
+disabled = true
