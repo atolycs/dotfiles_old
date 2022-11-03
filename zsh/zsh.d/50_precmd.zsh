@@ -1,5 +1,5 @@
 precmd() {
    vcs_info
-   RPROMPT=":%(?.).()"
+#   RPROMPT=":%(?.).()"
    eval "${PROMPT_COMMAND}"
 }

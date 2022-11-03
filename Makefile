@@ -8,6 +8,7 @@ DETECTED_SHELL_PATH = $(shell exec cat /etc/passwd | grep "${RUN_USER}" | awk -F
 DETECTED_SHELL = $(shell basename ${DETECTED_SHELL_PATH})
 
 ZSH_DIR = $(TOP_DIR)/zsh
+STARSHIP_DIR = $(TOP_DIR)/starship
 MKMODULE_DIR = $(TOP_DIR)/make
 DIRCOLORS_DIR = $(TOP_DIR)/dircolors
 
