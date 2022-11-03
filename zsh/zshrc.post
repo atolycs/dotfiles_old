@@ -6,3 +6,7 @@ done
 if [[ -x `which sheldon` ]]; then
     eval "$(sheldon source)"
 fi
+
+if [[ -x `which starship` ]];then
+    eval "$(starship init zsh)"
+fi
