@@ -8,10 +8,9 @@ local ensure_packer = function()
   end
   return false
 end
-
 local packer_bootstrap = ensure_packer()
 
-return require('packer').startup(function(use)
+require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   -- My plugins here
   -- use 'foo1/bar1.nvim'
@@ -41,3 +40,6 @@ return require('packer').startup(function(use)
     require('packer').sync()
   end
 end)
+-- require('')
+-- require('startup')
+-- Fern :%h -toggle -drawer
