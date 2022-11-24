@@ -10,7 +10,12 @@ local ensure_packer = function()
 end
 local packer_bootstrap = ensure_packer()
 
-require('packer').startup(function(use)
+vim.cmd [[
+   set expandtab
+   set shiftwidth=2
+]]
+
+return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   -- My plugins here
   -- use 'foo1/bar1.nvim'
