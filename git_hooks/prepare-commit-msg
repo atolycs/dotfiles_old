@@ -26,9 +26,11 @@ SHA1=$3
 
 branch=$(git branch | grep "*" | awk '{print $2}' | sed -e 's/[\/_]/ /g')
 
+
 #/usr/bin/perl -i.bak -ne 'print unless(m/^. Please enter the commit message/..m/^#$/)' \
 #                     -e "s/{branch}/$branch/g; print" "$COMMIT_MSG_FILE"
 /usr/bin/perl -i.bak -ne "s/{branch}/$branch/g; print" "$COMMIT_MSG_FILE"
+sha1sum $COMMIT_MSG_FILE > .git/COMMIT_MSG_SHA1SUM
 
 # case "$COMMIT_SOURCE,$SHA1" in
 #  ,|template,)
